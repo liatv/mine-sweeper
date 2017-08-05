@@ -1,31 +1,9 @@
-<div class="boared">
-  <div>
-    <div>
-      <input type="text" [(ngModel)]="rows"> X
-      <input type="text" [(ngModel)]="columns">
-    </div>
-    <div>
-      <img src="../../assets/mine.png" alt="Mines amount" height="40" width="40">
-      <input type="number" width="300px" [(ngModel)]="mines">
-    </div>
-    <div>
-      <img src="../../assets/flag.png" alt="Flags left" height="40" width="40">
-      <span>{{mines - flags.length}}</span>
-    </div>
-    <div>
-      <img [src]="superman ? '../../assets/superman-color.png' : '../../assets/superman-black.png'" (click)="superman = !superman"
-        alt="Supeman mode" height="40" width="40">
-    </div>
-    <div>
-      <button (click)="newGame()">newGame</button>
-    </div>
-  </div>
+<div class="board">
   <table>
     <tbody>
-      <tr *ngFor="let row of boardStructure">
+      <tr *ngFor="let row of game.boardStructure">
         <td *ngFor="let currCell of row">
-          <!-- {{currCell.numOfCloseMines}} -->
-          <cell [cell]="currCell" (click)="openCell(currCell, $event)" [superman]="superman"></cell>
+          <cell [cell]="currCell" (click)="game.openCell(currCell, $event)" [superman]="game.superman"></cell>
         </td>
       </tr>
     </tbody>

@@ -1,20 +1,36 @@
 .cell {
-    width: 100px;
-    height: 100px;
-    background: pink;
+    width: 1.5em;
+    height: 1.5em;
+    background: lightgray;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    display: flex;
+}
+
+.cell:hover {
+    opacity: 0.5;
 }
 
 .open {
-    background:greenyellow;
-    color: black;
+    background:lightcyan;
 }
 
 .flag {
-    background:red;
+    opacity: 1 !important;
+    background: lightpink;
+}
+
+.cell img {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.cell label {
+    text-align: center;
+    justify-content: center;
+    flex: 1;
 }

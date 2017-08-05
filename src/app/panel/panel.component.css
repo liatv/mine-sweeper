@@ -1,0 +1,33 @@
+.panel {
+    position: fixed;
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    flex:1;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.panel__section {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    margin-left: 15px;
+}
+
+.panel input {
+    width: 45px;
+    height: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    border-radius: 3px;
+}
+
+.panel img {
+    width: 40px;
+    height: 40px;
+}

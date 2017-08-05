@@ -1,4 +1,8 @@
 <!-- <div  class="cell">{{cell.closeMines}}...{{cell.isMine}}...{{cell.position.row}},{{cell.position.column}}</div> -->
-<div [ngClass]="{'cell': true, 'open': cell.isOpen, flag: cell.isFlag}">
-    <span *ngIf="(cell.isOpen || superman) && cell.closeMines">{{cell.isMine ? '*' : cell.closeMines}} </span>
+<div [ngClass]="{'cell': true, 'open': cell.isOpen, 'flag': cell.isFlag}">
+    <img *ngIf="cell.isFlag" src="../../assets/flag.png">
+    <div *ngIf="!cell.isFlag">
+        <label *ngIf="(cell.isOpen || superman) && !cell.isMine && cell.closeMines">{{cell.closeMines}}</label>
+        <img *ngIf="(cell.isOpen || superman) && cell.isMine" src="../../assets/mine.png">
+    </div>
 </div>
