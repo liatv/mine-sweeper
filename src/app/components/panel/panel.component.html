@@ -1,0 +1,22 @@
+<div class="panel">
+  <div class="panel__section">
+    <img src="../../assets/newGame.png" (click)="clickedNewGame()" alt="New game" clickable>
+  </div>
+  <div class="panel__section">
+    <input type="number" [(ngModel)]="rows">
+    <label style="margin: 5px">X</label>
+    <input type="number" [(ngModel)]="columns">
+  </div>
+  <div class="panel__section">
+    <img src="../../assets/mine.png" alt="Mines amount">
+    <input type="number" [(ngModel)]="mines">
+  </div>
+  <div class="panel__section">
+    <img src="../../assets/flag.png" alt="Flags left">
+      <span>{{flageRemain}}</span>
+  </div>
+  <div class="panel__section">
+    <img [src]="superman ? '../../assets/superman-color.png' : '../../assets/superman-black.png'" (click)="supermanChanged()"
+      alt="Supeman mode" clickable>
+  </div>
+</div>

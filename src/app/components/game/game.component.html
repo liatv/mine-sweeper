@@ -1,0 +1,5 @@
+  <div>
+    <panel [rows]="rows" [columns]="columns" [superman]="superman" (supermanClicked)="supermanClicked($event)" 
+           (newGame)="newGame($event)" [mines]="mines" [flageRemain]="game.mines - game.flags.length"></panel>
+    <board [superman]="superman"></board>
+</div>  

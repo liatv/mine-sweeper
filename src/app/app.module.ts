@@ -2,11 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { GameComponent } from './game/game.component';
-import { BoardComponent } from './board/board.component';
-import { CellComponent } from './cell/cell.component';
-import { PanelComponent } from './panel/panel.component';
-import { Game } from './model';
+import { GameComponent, BoardComponent, CellComponent, PanelComponent } from './components';
+import { GameProvider } from './providers/game.provider';
 
 @NgModule({
   declarations: [
@@ -16,7 +13,8 @@ import { Game } from './model';
     BrowserModule,
     FormsModule
   ],
-  providers: [ Game ],
+  providers: [ GameProvider ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

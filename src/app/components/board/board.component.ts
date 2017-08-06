@@ -1,6 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { Game } from '../model';
-
+import { GameProvider } from '../../providers/game.provider';
 
 @Component({
   selector: 'board',
@@ -9,6 +8,8 @@ import { Game } from '../model';
 })
 
 export class BoardComponent {
-  constructor(public game: Game) {
+  @Input() superman;
+
+  constructor(public game: GameProvider) {
   }
 }

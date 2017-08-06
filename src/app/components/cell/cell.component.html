@@ -1,0 +1,7 @@
+<div [ngClass]="{'cell': true, 'open': cell.isOpen, 'flag': cell.isFlag}">
+    <img *ngIf="cell.isFlag" src="../../assets/flag.png">
+    <div *ngIf="shouldDisplayCellContent()">
+        <label *ngIf="shouldDisplayMinesAround()">{{cell.minesAround}}</label>
+        <img *ngIf="cell.isMine" src="../../assets/mine.png">
+    </div>
+</div>
